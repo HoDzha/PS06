@@ -27,7 +27,7 @@ for product in products:
         name = product.find_element(By.CSS_SELECTOR, "span[itemprop='name']").text
 
         # Цена светильника
-        price = product.find_element(By.CSS_SELECTOR, "meta[itemprop='price']").get_attribute("content")
+        price = product.find_element(By.CSS_SELECTOR, "span.ui-LD-ZU.KIkOH[data-testid='price']").text
 
         # Ссылка на продукт
         link = product.find_element(By.CSS_SELECTOR, "link[itemprop='url']").get_attribute('href')
